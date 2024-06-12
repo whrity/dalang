@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/index",
+    "pages/history/index",
+    "pages/chat/index"
+
+  ],
+  "window": {
+    "backgroundColor": "#FFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "拍卖价格预测小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list" :[
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath":"images/home.png"
+      },
+      {
+        "pagePath": "pages/classify/index",
+        "text": "价格预测",
+        "iconPath": "images/price.png",
+        "selectedIconPath":"images/price.png"
+      },
+      {
+        "pagePath": "pages/history/index",
+        "text": "历史记录",
+        "iconPath": "images/history.png",
+        "selectedIconPath":"images/history.png"
+      },
+      {
+        "pagePath": "pages/chat/index",
+        "text": "问答助手",
+        "iconPath": "images/chat.png",
+        "selectedIconPath":"images/chat.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+  
+}

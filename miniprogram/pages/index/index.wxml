@@ -1,0 +1,12 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="welcome">欢迎进入玉石拍卖小程序</view>
+  <view clase="goods">部分商品展示：</view>
+  <swiper class="carousel" indicator-dots="true" autoplay="true" interval="5000" duration="500" indicator-active-color="#000000">
+    <swiper-item wx:for="{{goods}}" wx:key="unique" bindtap="viewDetail">
+      <image class="carousel-image" src="{{item.image}}" mode="aspectFill"/> 
+      <view class="carousel-title">{{item.title}}</view>
+    </swiper-item>
+  </swiper>
+
+</view>

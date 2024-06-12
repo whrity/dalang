@@ -1,0 +1,12 @@
+<!-- pages/upload-predict/upload-predict.wxml -->
+<view class="container">
+  <view class="image-preview">
+    <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFill"/>
+    <view wx:else class="user-tip" >请点击上传图片</view>
+  </view>
+  <button bindtap="chooseMedia">上传图片并进行预测</button>
+  <view  class="prediction">
+     {{result}}
+  </view>
+
+</view>

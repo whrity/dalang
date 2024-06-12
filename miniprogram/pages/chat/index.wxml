@@ -1,0 +1,14 @@
+<view class="container">
+  <scroll-view class="dialog" scroll-y="true" scroll-with-animation="true">
+    <block wx:for="{{dialog}}" wx:key="*this">
+      <view class="{{item.type === 'user' ? 'user-message' : 'assistant-message'}}">
+        <text>{{item.content}}</text>
+      </view>
+      <view class="message-spacer" wx:if="{{item.type === 'user' && index !== 0}}"></view> <!-- 添加一个空view作为分隔符 -->
+    </block>
+  </scroll-view>
+  <view class="input-container">
+    <input class="input" type="text" value="{{inputValue}}" bindinput="onInput" placeholder="请输入..."/>
+    <button class="send-button" bindtap="sendMessage">发送</button>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="container">
+    <view wx:if="{{isloading}}">加载中...</view>
+    <view wx:else>
+		<view wx:if="{{records.length}}">
+			<button class="delete-btn" bindtap="deleteHistory">删除</button>
+		</view>
+        <view wx:for="{{records}}" wx:key="index">
+            <view class="record-item">
+				<view class="image-container">
+					<image src="{{item.image}}" mode="aspectFit" id="imgId"></image>
+				</view>
+				<view class="info">
+					<text>预测时间：{{item.time}}\n预测结果：{{item.result}} </text>
+					<view bindtap="chooseHistory" data-id="{{item._id}}">
+						<checkbox></checkbox>
+					</view>
+				</view>
+      		</view>
+    	</view>
+  	</view>
+</view>
+
+<modal title="提示" hidden="{{!showmodal}}" bind:cancel="cancelDelete" bind:confirm="confirmDelete">
+  	<view>确定要删除所选记录吗？</view>
+</modal>

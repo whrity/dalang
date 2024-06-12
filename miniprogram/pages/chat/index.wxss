@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dialog {
+  flex: 1;
+  padding: 10px;
+  padding-bottom: 80px; /* 预留足够的空间给底部的输入栏 */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-message {
+  background-color: #9eea6a;
+  text-align: right;
+  margin-top: 2px;
+  margin-left: 10px; /* 留出左边的距离 */
+  margin-right: 20px; /* 留出右边的距离 */
+  margin-bottom: 5px;
+}
+
+.assistant-message {
+  background-color: #ffffff;
+  flex: 1; /* 使用flex布局，并设置flex-grow为1 */
+  margin-top: 5px;
+  margin-left: 10px; /* 留出左边的距离 */
+  margin-right: 20px; /* 留出右边的距离 */
+  margin-bottom: 5px;
+}
+
+.message-spacer {
+  height: 10px; /* 设置分隔符的高度 */
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.input {
+  flex: 1;
+  height: 30px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  margin-right: 20px; /* 增加右边距 */
+}
+
+.send-button {
+  height: 30px;
+  padding: 0 20px;
+  border-radius: 15px;
+  background-color: #007aff;
+  color: #ffffff;
+  line-height: 30px;
+}
